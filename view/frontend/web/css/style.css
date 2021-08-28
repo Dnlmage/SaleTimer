@@ -1,0 +1,23 @@
+.days, .hours, .minutes, .seconds {
+    float: left;
+    text-align: center;
+    color: white;
+    background-color: black;
+    margin-left: 2px;
+    font-size: 11px;
+    padding: 3px;
+}
+
+.danillozenko-sale-timer-instance {
+    width: 100%;
+    float: left;
+}
+
+.danillozenko-sale-timer-instance .value {
+    font-weight: bold;
+}
+
+.danillozenko-sale-timer-instance {
+    display: none;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,37 @@
+<?php if ($this->isEnable()): ?>
+    <?php $block->setProduct(); ?>
+    <div class="danillozenko_sale_timer_<?= $block->getProduct()->getSku() ?>">
+        <div class="danillozenko-sale-timer-instance">
+            <div class="days">
+                <div class="value"></div>
+                <div class="label">days</div>
+            </div>
+            <div class="hours">
+                <div class="value"></div>
+                <div class="label">hours</div>
+            </div>
+            <div class="minutes">
+                <div class="value"></div>
+                <div class="label">min(s)</div>
+            </div>
+            <div class="seconds">
+                <div class="value"></div>
+                <div class="label">sec(s)</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/x-magento-init">
+    {
+        ".danillozenko_sale_timer_<?= $block->getProduct()->getSku() ?>": {
+            "saleTimer": {
+                "sku" : "<?= $block->getProduct()->getSku() ?>",
+                "from": "<?= $block->getProduct()->getSpecialFromDate() ?>",
+                "to": "<?= $block->getProduct()->getSpecialToDate() ?>"
+            }
+        }
+    }
+
+    </script>
+<?php endif; ?>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="DanilLozenko_SaleTimer::css/style.css"/>
+    </head>
+    <body>
+        <referenceContainer name="product.info.price">
+            <block ifconfig="danillozenko_saletimer/general/enabled" class="DanilLozenko\SaleTimer\Block\SaleTimer" name="danillozenko_product_timer" template="DanilLozenko_SaleTimer::saleTimer.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
